@@ -42,6 +42,9 @@ std::vector<std::pair<int, std::string>> getTags() {
 
     std::string line;
 
+    // pula o header do .csv
+    std::getline(file, line);
+
     while (std::getline(file, line)) {
         std::istringstream iss(line);
         std::string idStr, tag;
